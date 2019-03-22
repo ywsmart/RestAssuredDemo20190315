@@ -4,7 +4,7 @@ import static io.restassured.RestAssured.*;
 import static org.hamcrest.Matchers.*;
 
 
-public class Demo {
+public class DemoTest {
     @Test
     public void testJson() {
         given()
@@ -35,7 +35,7 @@ public class Demo {
                 .body("shopping.category.item.size()", equalTo(5))
                 .body("shopping.category.findAll { it.@type == 'groceries' }.size()",equalTo(1))
                 .body("shopping.category.item.findAll { it.price == 20 }.name",equalTo("Coffee"))
-                .body("**.findAll { it.price == 20 }.name", equalTo("Coffee"))
+                    .body("**.findAll { it.price == 20 }.name", equalTo("Coffee"))
         ;
     }
 }

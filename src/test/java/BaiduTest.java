@@ -4,7 +4,7 @@ import static io.restassured.RestAssured.*;
 import static io.restassured.matcher.RestAssuredMatchers.*;
 import static org.hamcrest.Matchers.*;
 
-public class Baidu {
+public class BaiduTest {
     /**
      * 访问百度示例一下
      */
