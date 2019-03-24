@@ -105,7 +105,7 @@ public class XueqiuTest {
                 // 对结果断言
                 .then()
                 // 状态码断言
-                .statusCode(200)
+                .statusCode(403)
                 // 字段断言
                 .body("stocks.name", hasItem("搜狗"))
                 .body("stocks.code", hasItem("SOGO"))
@@ -136,7 +136,7 @@ public class XueqiuTest {
                 .post("/provider/oauth/token")
                 .then()
 //                .log().all()
-                .statusCode(400)
+                .statusCode(403)
 //                .body("error_code",equalTo("20082"))
                 .extract().response()
                 ;
@@ -156,7 +156,7 @@ public class XueqiuTest {
                 // 等价于下面text
 //                .body("{\"a\":1,\"b\":\"testerhome\"}")
                 .when().post("http://www.baidu.com")
-                .then().log().all().time(lessThan(50L));
+                .then().log().all().time(lessThan(500L));
 //                .spec(responseSpecification);
     }
 
