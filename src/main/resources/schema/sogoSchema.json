@@ -1,0 +1,452 @@
+{
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://stock.xueqiu.com/v5/stock/batch/quote.json?symbol=SOGO",
+  "type": "object",
+  "title": "The Root Schema",
+  "required": [
+    "data",
+    "error_code",
+    "error_description"
+  ],
+  "properties": {
+    "data": {
+      "$id": "#/properties/data",
+      "type": "object",
+      "title": "The Data Schema",
+      "required": [
+        "items",
+        "items_size"
+      ],
+      "properties": {
+        "items": {
+          "$id": "#/properties/data/properties/items",
+          "type": "array",
+          "title": "The Items Schema",
+          "items": {
+            "$id": "#/properties/data/properties/items/items",
+            "type": "object",
+            "title": "The Items Schema",
+            "required": [
+              "market",
+              "quote",
+              "tags"
+            ],
+            "properties": {
+              "market": {
+                "$id": "#/properties/data/properties/items/items/properties/market",
+                "type": "object",
+                "title": "The Market Schema",
+                "required": [
+                  "status_id",
+                  "region",
+                  "status",
+                  "time_zone"
+                ],
+                "properties": {
+                  "status_id": {
+                    "$id": "#/properties/data/properties/items/items/properties/market/properties/status_id",
+                    "type": "integer",
+                    "title": "The Status_id Schema",
+                    "default": 0,
+                    "examples": [
+                      7
+                    ]
+                  },
+                  "region": {
+                    "$id": "#/properties/data/properties/items/items/properties/market/properties/region",
+                    "type": "string",
+                    "title": "The Region Schema",
+                    "default": "",
+                    "examples": [
+                      "US"
+                    ],
+                    "pattern": "^(.*)$"
+                  },
+                  "status": {
+                    "$id": "#/properties/data/properties/items/items/properties/market/properties/status",
+                    "type": "string",
+                    "title": "The Status Schema",
+                    "default": "",
+                    "examples": [
+                      "已收盘"
+                    ],
+                    "pattern": "^(.*)$"
+                  },
+                  "time_zone": {
+                    "$id": "#/properties/data/properties/items/items/properties/market/properties/time_zone",
+                    "type": "string",
+                    "title": "The Time_zone Schema",
+                    "default": "",
+                    "examples": [
+                      "America/New_York"
+                    ],
+                    "pattern": "^(.*)$"
+                  }
+                }
+              },
+              "quote": {
+                "$id": "#/properties/data/properties/items/items/properties/quote",
+                "type": "object",
+                "title": "The Quote Schema",
+                "required": [
+                  "symbol",
+                  "code",
+                  "exchange",
+                  "name",
+                  "type",
+                  "sub_type",
+                  "status",
+                  "current",
+                  "currency",
+                  "percent",
+                  "chg",
+                  "timestamp",
+                  "time",
+                  "lot_size",
+                  "tick_size",
+                  "open",
+                  "last_close",
+                  "high",
+                  "low",
+                  "avg_price",
+                  "volume",
+                  "amount",
+                  "turnover_rate",
+                  "amplitude",
+                  "market_capital",
+                  "float_market_capital",
+                  "total_shares",
+                  "float_shares",
+                  "issue_date",
+                  "lock_set",
+                  "current_year_percent"
+                ],
+                "properties": {
+                  "symbol": {
+                    "$id": "#/properties/data/properties/items/items/properties/quote/properties/symbol",
+                    "type": "string",
+                    "title": "The Symbol Schema",
+                    "default": "",
+                    "examples": [
+                      "SOGO"
+                    ],
+                    "pattern": "^(.*)$"
+                  },
+                  "code": {
+                    "$id": "#/properties/data/properties/items/items/properties/quote/properties/code",
+                    "type": "string",
+                    "title": "The Code Schema",
+                    "default": "",
+                    "examples": [
+                      "SOGO"
+                    ],
+                    "pattern": "^(.*)$"
+                  },
+                  "exchange": {
+                    "$id": "#/properties/data/properties/items/items/properties/quote/properties/exchange",
+                    "type": "string",
+                    "title": "The Exchange Schema",
+                    "default": "",
+                    "examples": [
+                      "NYSE"
+                    ],
+                    "pattern": "^(.*)$"
+                  },
+                  "name": {
+                    "$id": "#/properties/data/properties/items/items/properties/quote/properties/name",
+                    "type": "string",
+                    "title": "The Name Schema",
+                    "default": "",
+                    "examples": [
+                      "搜狗"
+                    ],
+                    "pattern": "^(.*)$"
+                  },
+                  "type": {
+                    "$id": "#/properties/data/properties/items/items/properties/quote/properties/type",
+                    "type": "integer",
+                    "title": "The Type Schema",
+                    "default": 0,
+                    "examples": [
+                      0
+                    ]
+                  },
+                  "sub_type": {
+                    "$id": "#/properties/data/properties/items/items/properties/quote/properties/sub_type",
+                    "type": "string",
+                    "title": "The Sub_type Schema",
+                    "default": "",
+                    "examples": [
+                      "1536"
+                    ],
+                    "pattern": "^(.*)$"
+                  },
+                  "status": {
+                    "$id": "#/properties/data/properties/items/items/properties/quote/properties/status",
+                    "type": "integer",
+                    "title": "The Status Schema",
+                    "default": 0,
+                    "examples": [
+                      1
+                    ]
+                  },
+                  "current": {
+                    "$id": "#/properties/data/properties/items/items/properties/quote/properties/current",
+                    "type": "number",
+                    "title": "The Current Schema",
+                    "default": 0.0,
+                    "examples": [
+                      5.56
+                    ]
+                  },
+                  "currency": {
+                    "$id": "#/properties/data/properties/items/items/properties/quote/properties/currency",
+                    "type": "string",
+                    "title": "The Currency Schema",
+                    "default": "",
+                    "examples": [
+                      "USD"
+                    ],
+                    "pattern": "^(.*)$"
+                  },
+                  "percent": {
+                    "$id": "#/properties/data/properties/items/items/properties/quote/properties/percent",
+                    "type": "number",
+                    "title": "The Percent Schema",
+                    "default": 0.0,
+                    "examples": [
+                      -2.28
+                    ]
+                  },
+                  "chg": {
+                    "$id": "#/properties/data/properties/items/items/properties/quote/properties/chg",
+                    "type": "number",
+                    "title": "The Chg Schema",
+                    "default": 0.0,
+                    "examples": [
+                      -0.13
+                    ]
+                  },
+                  "timestamp": {
+                    "$id": "#/properties/data/properties/items/items/properties/quote/properties/timestamp",
+                    "type": "integer",
+                    "title": "The Timestamp Schema",
+                    "default": 0,
+                    "examples": [
+                      1556740923571
+                    ]
+                  },
+                  "time": {
+                    "$id": "#/properties/data/properties/items/items/properties/quote/properties/time",
+                    "type": "integer",
+                    "title": "The Time Schema",
+                    "default": 0,
+                    "examples": [
+                      1556740923571
+                    ]
+                  },
+                  "lot_size": {
+                    "$id": "#/properties/data/properties/items/items/properties/quote/properties/lot_size",
+                    "type": "integer",
+                    "title": "The Lot_size Schema",
+                    "default": 0,
+                    "examples": [
+                      1
+                    ]
+                  },
+                  "tick_size": {
+                    "$id": "#/properties/data/properties/items/items/properties/quote/properties/tick_size",
+                    "type": "number",
+                    "title": "The Tick_size Schema",
+                    "default": 0.0,
+                    "examples": [
+                      0.01
+                    ]
+                  },
+                  "open": {
+                    "$id": "#/properties/data/properties/items/items/properties/quote/properties/open",
+                    "type": "number",
+                    "title": "The Open Schema",
+                    "default": 0.0,
+                    "examples": [
+                      5.67
+                    ]
+                  },
+                  "last_close": {
+                    "$id": "#/properties/data/properties/items/items/properties/quote/properties/last_close",
+                    "type": "number",
+                    "title": "The Last_close Schema",
+                    "default": 0.0,
+                    "examples": [
+                      5.69
+                    ]
+                  },
+                  "high": {
+                    "$id": "#/properties/data/properties/items/items/properties/quote/properties/high",
+                    "type": "number",
+                    "title": "The High Schema",
+                    "default": 0.0,
+                    "examples": [
+                      5.76
+                    ]
+                  },
+                  "low": {
+                    "$id": "#/properties/data/properties/items/items/properties/quote/properties/low",
+                    "type": "number",
+                    "title": "The Low Schema",
+                    "default": 0.0,
+                    "examples": [
+                      5.54
+                    ]
+                  },
+                  "avg_price": {
+                    "$id": "#/properties/data/properties/items/items/properties/quote/properties/avg_price",
+                    "type": "number",
+                    "title": "The Avg_price Schema",
+                    "default": 0.0,
+                    "examples": [
+                      5.617
+                    ]
+                  },
+                  "volume": {
+                    "$id": "#/properties/data/properties/items/items/properties/quote/properties/volume",
+                    "type": "integer",
+                    "title": "The Volume Schema",
+                    "default": 0,
+                    "examples": [
+                      1006881
+                    ]
+                  },
+                  "amount": {
+                    "$id": "#/properties/data/properties/items/items/properties/quote/properties/amount",
+                    "type": "integer",
+                    "title": "The Amount Schema",
+                    "default": 0,
+                    "examples": [
+                      5655651
+                    ]
+                  },
+                  "turnover_rate": {
+                    "$id": "#/properties/data/properties/items/items/properties/quote/properties/turnover_rate",
+                    "type": "number",
+                    "title": "The Turnover_rate Schema",
+                    "default": 0.0,
+                    "examples": [
+                      0.26
+                    ]
+                  },
+                  "amplitude": {
+                    "$id": "#/properties/data/properties/items/items/properties/quote/properties/amplitude",
+                    "type": "number",
+                    "title": "The Amplitude Schema",
+                    "default": 0.0,
+                    "examples": [
+                      3.87
+                    ]
+                  },
+                  "market_capital": {
+                    "$id": "#/properties/data/properties/items/items/properties/quote/properties/market_capital",
+                    "type": "integer",
+                    "title": "The Market_capital Schema",
+                    "default": 0,
+                    "examples": [
+                      2175924765
+                    ]
+                  },
+                  "float_market_capital": {
+                    "$id": "#/properties/data/properties/items/items/properties/quote/properties/float_market_capital",
+                    "type": "null",
+                    "title": "The Float_market_capital Schema",
+                    "default": null,
+                    "examples": [
+                      null
+                    ]
+                  },
+                  "total_shares": {
+                    "$id": "#/properties/data/properties/items/items/properties/quote/properties/total_shares",
+                    "type": "integer",
+                    "title": "The Total_shares Schema",
+                    "default": 0,
+                    "examples": [
+                      391353375
+                    ]
+                  },
+                  "float_shares": {
+                    "$id": "#/properties/data/properties/items/items/properties/quote/properties/float_shares",
+                    "type": "null",
+                    "title": "The Float_shares Schema",
+                    "default": null,
+                    "examples": [
+                      null
+                    ]
+                  },
+                  "issue_date": {
+                    "$id": "#/properties/data/properties/items/items/properties/quote/properties/issue_date",
+                    "type": "integer",
+                    "title": "The Issue_date Schema",
+                    "default": 0,
+                    "examples": [
+                      1510156800000
+                    ]
+                  },
+                  "lock_set": {
+                    "$id": "#/properties/data/properties/items/items/properties/quote/properties/lock_set",
+                    "type": "integer",
+                    "title": "The Lock_set Schema",
+                    "default": 0,
+                    "examples": [
+                      1
+                    ]
+                  },
+                  "current_year_percent": {
+                    "$id": "#/properties/data/properties/items/items/properties/quote/properties/current_year_percent",
+                    "type": "number",
+                    "title": "The Current_year_percent Schema",
+                    "default": 0.0,
+                    "examples": [
+                      5.9
+                    ]
+                  }
+                }
+              },
+              "tags": {
+                "$id": "#/properties/data/properties/items/items/properties/tags",
+                "type": "array",
+                "title": "The Tags Schema"
+              }
+            }
+          }
+        },
+        "items_size": {
+          "$id": "#/properties/data/properties/items_size",
+          "type": "integer",
+          "title": "The Items_size Schema",
+          "default": 0,
+          "examples": [
+            1
+          ]
+        }
+      }
+    },
+    "error_code": {
+      "$id": "#/properties/error_code",
+      "type": "integer",
+      "title": "The Error_code Schema",
+      "default": 0,
+      "examples": [
+        0
+      ]
+    },
+    "error_description": {
+      "$id": "#/properties/error_description",
+      "type": "string",
+      "title": "The Error_description Schema",
+      "default": "",
+      "examples": [
+        ""
+      ],
+      "pattern": "^(.*)$"
+    }
+  }
+}
